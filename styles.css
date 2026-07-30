@@ -94,7 +94,6 @@ html, body {
   display: inline-block;
 }
 .dot-primary { background: var(--accent); }
-.dot-muted { background: var(--muted-marker); }
 .summary {
   font-size: 14px;
   font-weight: 600;

@@ -72,17 +72,19 @@ function matchesQuery(row, query) {
 
 function splitRows(rows, selectedRG, query) {
   const searchMatches = rows.filter(row => matchesQuery(row, query));
-  if (!selectedRG) {
-    return { highlighted: searchMatches, muted: [] };
-  }
+  const visible = selectedRG
+    ? searchMatches.filter(row => row.RG === selectedRG)
+    : searchMatches;
+
   return {
-    highlighted: searchMatches.filter(row => row.RG === selectedRG),
-    muted: searchMatches.filter(row => row.RG !== selectedRG)
+    visible,
+    selectedRG,
+    isFiltered: Boolean(selectedRG)
   };
 }
 
-function markerStyle(isHighlighted, hasSelectedRG) {
-  if (!hasSelectedRG) {
+function markerStyle(isFiltered) {
+  if (!isFiltered) {
     return {
       radius: 7,
       color: '#2783de',
@@ -92,22 +94,12 @@ function markerStyle(isHighlighted, hasSelectedRG) {
     };
   }
 
-  if (isHighlighted) {
-    return {
-      radius: 8,
-      color: '#2783de',
-      fillColor: '#2783de',
-      fillOpacity: 0.88,
-      weight: 2
-    };
-  }
-
   return {
-    radius: 6,
-    color: '#b6b1aa',
-    fillColor: '#b6b1aa',
-    fillOpacity: 0.42,
-    weight: 1
+    radius: 8,
+    color: '#2783de',
+    fillColor: '#2783de',
+    fillOpacity: 0.9,
+    weight: 2
   };
 }
 
@@ -135,13 +127,8 @@ function renderMarkers(split) {
   clusterGroup.clearLayers();
   markerByName = new Map();
 
-  const selectedRG = getSelectedRG();
-  const hasSelectedRG = Boolean(selectedRG);
-  const combined = [...split.muted, ...split.highlighted];
-
-  for (const row of combined) {
-    const isHighlighted = !hasSelectedRG || row.RG === selectedRG;
-    const marker = L.circleMarker([row.Latitude, row.Longitude], markerStyle(isHighlighted, hasSelectedRG));
+  for (const row of split.visible) {
+    const marker = L.circleMarker([row.Latitude, row.Longitude], markerStyle(split.isFiltered));
     marker.bindPopup(popupHtml(row));
     clusterGroup.addLayer(marker);
     markerByName.set(row.Name, marker);
@@ -154,22 +141,18 @@ function renderList(split) {
   const emptyState = document.getElementById('emptyState');
   list.innerHTML = '';
 
-  const selectedRG = getSelectedRG();
-  const combined = [...split.highlighted, ...split.muted];
-  const highlightedCount = split.highlighted.length;
-
-  if (selectedRG) {
-    summary.textContent = `${combined.length} Treffer, davon ${highlightedCount} in RG ${selectedRG}`;
+  if (split.selectedRG) {
+    summary.textContent = `${split.visible.length} Treffer in RG ${split.selectedRG}`;
   } else {
-    summary.textContent = `${combined.length} Treffer`;
+    summary.textContent = `${split.visible.length} Treffer`;
   }
 
-  emptyState.hidden = combined.length !== 0;
+  emptyState.hidden = split.visible.length !== 0;
 
-  for (const row of combined) {
+  for (const row of split.visible) {
     const li = document.createElement('li');
     li.className = 'result-card';
-    if (selectedRG && row.RG === selectedRG) {
+    if (split.isFiltered) {
       li.classList.add('is-highlighted');
     }
 
@@ -192,15 +175,14 @@ function renderList(split) {
 }
 
 function fitToRows(split) {
-  const combined = [...split.highlighted, ...split.muted];
-  if (combined.length === 0) {
+  if (split.visible.length === 0) {
     return;
   }
-  if (combined.length === 1) {
-    map.setView([combined[0].Latitude, combined[0].Longitude], 15);
+  if (split.visible.length === 1) {
+    map.setView([split.visible[0].Latitude, split.visible[0].Longitude], 15);
     return;
   }
-  const bounds = L.latLngBounds(combined.map(row => [row.Latitude, row.Longitude]));
+  const bounds = L.latLngBounds(split.visible.map(row => [row.Latitude, row.Longitude]));
   map.fitBounds(bounds, { padding: [28, 28] });
 }
 
