@@ -10,6 +10,7 @@ const clusterGroup = L.markerClusterGroup({
   spiderfyOnMaxZoom: true,
   maxClusterRadius: 45
 });
+const filteredLayerGroup = L.featureGroup();
 map.addLayer(clusterGroup);
 
 let allRows = [];
@@ -83,6 +84,26 @@ function splitRows(rows, selectedRG, query) {
   };
 }
 
+function setActiveLayer(isFiltered) {
+  if (isFiltered) {
+    if (map.hasLayer(clusterGroup)) {
+      map.removeLayer(clusterGroup);
+    }
+    if (!map.hasLayer(filteredLayerGroup)) {
+      map.addLayer(filteredLayerGroup);
+    }
+    return filteredLayerGroup;
+  }
+
+  if (map.hasLayer(filteredLayerGroup)) {
+    map.removeLayer(filteredLayerGroup);
+  }
+  if (!map.hasLayer(clusterGroup)) {
+    map.addLayer(clusterGroup);
+  }
+  return clusterGroup;
+}
+
 function markerStyle(isFiltered) {
   if (!isFiltered) {
     return {
@@ -125,12 +146,15 @@ function escapeHtml(value) {
 
 function renderMarkers(split) {
   clusterGroup.clearLayers();
+  filteredLayerGroup.clearLayers();
   markerByName = new Map();
+
+  const activeLayer = setActiveLayer(split.isFiltered);
 
   for (const row of split.visible) {
     const marker = L.circleMarker([row.Latitude, row.Longitude], markerStyle(split.isFiltered));
     marker.bindPopup(popupHtml(row));
-    clusterGroup.addLayer(marker);
+    activeLayer.addLayer(marker);
     markerByName.set(row.Name, marker);
   }
 }
