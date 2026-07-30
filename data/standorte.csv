@@ -1,0 +1,251 @@
+﻿Name;RG;StrasseHausnummer;PLZ;Ort;Land;AdresseVoll;Latitude;Longitude
+BAR002;BAR;Neuer Kamp 31;20359;Hamburg;DE;Neuer Kamp 31, 20359 Hamburg, DE;53.5563609;9.9661764
+BAR014;BAR;Schreyerring 6;22309;Hamburg;DE;Schreyerring 6, 22309 Hamburg, DE;53.6116231;10.0584946
+BAR030;BAR;Schiffbeker Weg 27;22111;Hamburg;DE;Schiffbeker Weg 27, 22111 Hamburg, DE;53.5428720;10.1014295
+BAR031;BAR;Querkamp 69;22119;Hamburg;DE;Querkamp 69, 22119 Hamburg, DE;53.5573753;10.1029148
+BAR062;BAR;Lohkampstraße 11-25;22523;Hamburg;DE;Lohkampstraße 11-25, 22523 Hamburg, DE;53.6119517;9.8929412
+DAT002;DAT;Schützenstraße 144-146;44147;Dortmund;DE;Schützenstraße 144-146, 44147 Dortmund, DE;51.5270353;7.4518497
+DAT015;DAT;Bornstraße 160;44145;Dortmund;DE;Bornstraße 160, 44145 Dortmund, DE;51.5305659;7.4711824
+DAT060;DAT;Joachimstraße 4;44147;Dortmund;DE;Joachimstraße 4, 44147 Dortmund, DE;51.5114798;7.4339498
+DAT082;DAT;Castroper Straße 206;44791;Bochum;DE;Castroper Straße 206, 44791 Bochum, DE;51.4909376;7.2432567
+DAT084;DAT;Unterstraße 52-58;44892;Bochum;DE;Unterstraße 52-58, 44892 Bochum, DE;51.4721768;7.3142237
+DAT090;DAT;Höntroper Straße 67;44869;Bochum;DE;Höntroper Straße 67, 44869 Bochum, DE;51.4593782;7.1574615
+GRO012;GRO;Potsdamer Straße 180;10783;Berlin;DE;Potsdamer Straße 180, 10783 Berlin, DE;52.4938943;13.3607643
+GRO086;GRO;Wilmersdorfer Straße 36-37;10625;Berlin;DE;Wilmersdorfer Straße 36-37, 10625 Berlin, DE;52.5121281;13.3048910
+HER003;HER;Amtmann-Ibing-Straße 9;44805;Bochum;DE;Amtmann-Ibing-Straße 9, 44805 Bochum, DE;51.5183328;7.2811049
+HER013;HER;Dorstener Straße 263-265;44653;Herne;DE;Dorstener Straße 263-265, 44653 Herne, DE;51.5328708;7.1853742
+HER018;HER;Steeler Straße 187;45138;Essen;DE;Steeler Straße 187, 45138 Essen, DE;51.4496941;7.0349285
+HER022;HER;Horster Straße 41;45897;Gelsenkirchen;DE;Horster Straße 41, 45897 Gelsenkirchen, DE;51.5755175;7.0499382
+HER026;HER;Zechenstraße 1;46284;Dorsten;DE;Zechenstraße 1, 46284 Dorsten, DE;51.6719676;6.9814397
+HER032;HER;Katernberger Straße 48-50;45327;Essen;DE;Katernberger Straße 48-50, 45327 Essen, DE;51.4981976;7.0490317
+HER039;HER;Donnerstraße 228-240;45359;Essen;DE;Donnerstraße 228-240, 45359 Essen, DE;51.4876358;6.9237490
+HER044;HER;Buersche Straße 83;45964;Gladbeck;DE;Buersche Straße 83, 45964 Gladbeck, DE;51.5788891;7.0051078
+HER045;HER;Wulfener Markt 350;46286;Dorsten;DE;Wulfener Markt 350, 46286 Dorsten, DE;51.7259799;7.0268200
+HER046;HER;Horster Straße 55b;45964;Gladbeck;DE;Horster Straße 55b, 45964 Gladbeck, DE;51.5695551;6.9959566
+HER047;HER;Natorpstraße 26-30;45139;Essen;DE;Natorpstraße 26-30, 45139 Essen, DE;51.4563219;7.0251926
+HER051;HER;Altendorfer Straße 226;45143;Essen;DE;Altendorfer Straße 226, 45143 Essen, DE;51.4600783;6.9852380
+HER058;HER;Frintroper Straße 422;45359;Essen;DE;Frintroper Straße 422, 45359 Essen, DE;51.4750308;6.9142859
+HER064;HER;Kurt-Schumacher-Straße 192;45881;Gelsenkirchen;DE;Kurt-Schumacher-Straße 192, 45881 Gelsenkirchen, DE;51.5373123;7.0724013
+HER069;HER;Erler Straße 28;46286;Dorsten;DE;Erler Straße 28, 46286 Dorsten, DE;51.7519922;6.9326416
+HER071;HER;Wilhelm-Nieswandt-Allee 198;45326;Essen;DE;Wilhelm-Nieswandt-Allee 198, 45326 Essen, DE;51.5027470;7.0096739
+HER072;HER;Lierfeldstraße 5;45326;Essen;DE;Lierfeldstraße 5, 45326 Essen, DE;51.4845914;7.0100702
+HER075;HER;Am Dördelmannshof 6;45886;Gelsenkirchen;DE;Am Dördelmannshof 6, 45886 Gelsenkirchen, DE;51.4922887;7.1260938
+HER076;HER;Rüttenscheider Straße 62-64;45130;Essen;DE;Rüttenscheider Straße 62-64, 45130 Essen, DE;51.4392027;7.0059969
+HER088;HER;Twentmannstraße 7-11;45141;Essen;DE;Twentmannstraße 7-11, 45141 Essen, DE;51.4765800;7.0317728
+HER090;HER;Feilenstraße 3;45141;Essen;DE;Feilenstraße 3, 45141 Essen, DE;51.4721262;6.9994596
+HER099;HER;Kaiserstraße 1a;45699;Herten;DE;Kaiserstraße 1a, 45699 Herten, DE;51.5999311;7.1498201
+HER100;HER;Willy-Brandt-Platz 7;45127;Essen;DE;Willy-Brandt-Platz 7, 45127 Essen, DE;51.4525563;7.0128870
+HES001;HES;Gökerstraße 111c;26384;Wilhelmshaven;DE;Gökerstraße 111c, 26384 Wilhelmshaven, DE;53.5292906;8.1258795
+HES004;HES;Rüderstraße 3A;26382;Wilhelmshaven;DE;Rüderstraße 3A, 26382 Wilhelmshaven, DE;53.5157636;8.1014403
+HES012;HES;Lookvenne 12;26721;Emden;DE;Lookvenne 12, 26721 Emden, DE;53.3671097;7.2023318
+HES013;HES;Cloppenburger Straße 293;26133;Oldenburg;DE;Cloppenburger Straße 293, 26133 Oldenburg, DE;53.1132606;8.2124162
+HES015;HES;Posener Straße 91;26388;Wilhelmshaven;DE;Posener Straße 91, 26388 Wilhelmshaven, DE;53.5739573;8.0847384
+HES018;HES;Werftstraße 161;26382;Wilhelmshaven;DE;Werftstraße 161, 26382 Wilhelmshaven, DE;53.5282076;8.0989537
+JAR016;JAR;Carl-Loewe-Ring 1;18435;Stralsund;DE;Carl-Loewe-Ring 1, 18435 Stralsund, DE;54.3220473;13.0552563
+LIN008;LIN;Friedrichstraße 15;49809;Lingen (Ems);DE;Friedrichstraße 15, 49809 Lingen (Ems), DE;52.5214298;7.3313588
+LIN024;LIN;Friedrich-Ebert-Ring 184;48429;Rheine;DE;Friedrich-Ebert-Ring 184, 48429 Rheine, DE;52.2951270;7.4506249
+LIN035;LIN;Salzbergener Straße 72-86;48431;Rheine;DE;Salzbergener Straße 72-86, 48431 Rheine, DE;52.2805991;7.4339353
+LIN042;LIN;Bramscher Straße 46-48;49593;Bersenbrück;DE;Bramscher Straße 46-48, 49593 Bersenbrück, DE;52.5498898;7.9498316
+LIN054;LIN;Friedrichstraße 24;49610;Quakenbrück;DE;Friedrichstraße 24, 49610 Quakenbrück, DE;52.6734474;7.9461944
+LIN055;LIN;Kistemakerstraße 2-8;48529;Nordhorn;DE;Kistemakerstraße 2-8, 48529 Nordhorn, DE;52.4450257;7.0635453
+LIN077;LIN;Am Heidenturm 1;49477;Ibbenbüren;DE;Am Heidenturm 1, 49477 Ibbenbüren, DE;52.2694049;7.7194702
+LIN085;LIN;Petersburger Wall 9;49074;Osnabrück;DE;Petersburger Wall 9, 49074 Osnabrück, DE;52.2674458;8.0551233
+LIN086;LIN;Mönkedieckstraße 3-9;49088;Osnabrück;DE;Mönkedieckstraße 3-9, 49088 Osnabrück, DE;52.3005993;8.0601676
+LIN087;LIN;Heiligenweg 2;49084;Osnabrück;DE;Heiligenweg 2, 49084 Osnabrück, DE;52.2726405;8.0857930
+LIN088;LIN;Hannoversche Straße 90;49084;Osnabrück;DE;Hannoversche Straße 90, 49084 Osnabrück, DE;52.2579580;8.0845078
+LIN089;LIN;Bohmter Straße 64-64c;49074;Osnabrück;DE;Bohmter Straße 64-64c, 49074 Osnabrück, DE;52.2809945;8.0666581
+LIN090;LIN;Pagenstecherstraße 144;49090;Osnabrück;DE;Pagenstecherstraße 144, 49090 Osnabrück, DE;52.2953717;8.0163492
+LIN097;LIN;Bahnhofstraße 43;48565;Steinfurt;DE;Bahnhofstraße 43, 48565 Steinfurt, DE;52.1471537;7.3320652
+LIN107;LIN;Weststraße 9;49324;Melle;DE;Weststraße 9, 49324 Melle, DE;52.2057796;8.3354947
+MEI006;MEI;Dr.-Kurt-Schumacher-Straße 16;39576;Stendal;DE;Dr.-Kurt-Schumacher-Straße 16, 39576 Stendal, DE;52.6019021;11.8369673
+MEI017;MEI;Löderburger Straße 97a;39418;Staßfurt;DE;Löderburger Straße 97a, 39418 Staßfurt, DE;51.8631642;11.5635038
+MEI023;MEI;Schillerstraße 11;39218;Schönebeck;DE;Schillerstraße 11, 39218 Schönebeck, DE;52.0164333;11.7330704
+MEI032;MEI;Emmerstedter Straße 12;38350;Helmstedt;DE;Emmerstedter Straße 12, 38350 Helmstedt, DE;52.2420239;10.9927799
+MEI035;MEI;Bergstraße 27;39116;Magdeburg;DE;Bergstraße 27, 39116 Magdeburg, DE;52.1079594;11.5932198
+MEI037;MEI;Magdeburger Straße 81;39340;Haldensleben;DE;Magdeburger Straße 81, 39340 Haldensleben, DE;52.2867777;11.4201236
+MEI038;MEI;Olvenstedter Graseweg 37;39128;Magdeburg;DE;Olvenstedter Graseweg 37, 39128 Magdeburg, DE;52.1602399;11.6043898
+MEI040;MEI;Ackerstrasse 2;39112;Magdeburg;DE;Ackerstrasse 2, 39112 Magdeburg, DE;52.1154091;11.6189486
+MEI041;MEI;Große Diesdorfer Straße 41;39110;Magdeburg;DE;Große Diesdorfer Straße 41, 39110 Magdeburg, DE;52.1298776;11.6042073
+MEI047;MEI;Hanns-Eisler-Platz 11;39128;Magdeburg;DE;Hanns-Eisler-Platz 11, 39128 Magdeburg, DE;52.1695284;11.6250972
+MEI048;MEI;Friedrich-Ebert-Straße 73;39114;Magdeburg;DE;Friedrich-Ebert-Straße 73, 39114 Magdeburg, DE;52.1262450;11.6660562
+MEI051;MEI;Rogätzer Straße 27;39106;Magdeburg;DE;Rogätzer Straße 27, 39106 Magdeburg, DE;52.1485722;11.6558445
+MEI057;MEI;Willy-Brandt-Platz 1;39104;Magdeburg;DE;Willy-Brandt-Platz 1, 39104 Magdeburg, DE;52.1313563;11.6284941
+MEI068;MEI;Wolfsburger Straße 1;38820;Halberstadt;DE;Wolfsburger Straße 1, 38820 Halberstadt, DE;51.9041889;11.0396137
+MEI069;MEI;Magdeburger Straße 47;38820;Halberstadt;DE;Magdeburger Straße 47, 38820 Halberstadt, DE;51.8982220;11.0621802
+MEI088;MEI;Theodor-Fontane-Straße 34;38855;Wernigerode;DE;Theodor-Fontane-Straße 34, 38855 Wernigerode, DE;51.8456911;10.8058515
+MUN006;MUN;Mauerstraße 11;34117;Kassel;DE;Mauerstraße 11, 34117 Kassel, DE;51.3166023;9.4965434
+MUN018;MUN;Leipziger Straße 124;34123;Kassel;DE;Leipziger Straße 124, 34123 Kassel, DE;51.3049950;9.5265172
+MUN031;MUN;Bismarckstraße 10;36179;Bebra;DE;Bismarckstraße 10, 36179 Bebra, DE;50.9697007;9.7954200
+MUN036;MUN;Fuldatalstraße 14;34125;Kassel;DE;Fuldatalstraße 14, 34125 Kassel, DE;51.3255941;9.5185882
+MUN045;MUN;Nordhäuser Weg 3;37154;Northeim;DE;Nordhäuser Weg 3, 37154 Northeim, DE;51.7083731;10.0051559
+MUN047;MUN;Niedervellmarer Straße 2;34127;Kassel;DE;Niedervellmarer Straße 2, 34127 Kassel, DE;51.3387439;9.4899448
+MUN050;MUN;Zum Feldlager 119;34246;Vellmar;DE;Zum Feldlager 119, 34246 Vellmar, DE;51.3524029;9.4668676
+MUN085;MUN;Ostring 40-44;34277;Fuldabrück;DE;Ostring 40-44, 34277 Fuldabrück, DE;51.2723604;9.4998079
+NOR004;NOR;Theodor-Heuss-Ring 136;24143;Kiel;DE;Theodor-Heuss-Ring 136, 24143 Kiel, DE;54.3005122;10.1404225
+NOR007;NOR;Neumünsterstraße 49b;24598;Boostedt;DE;Neumünsterstraße 49b, 24598 Boostedt, DE;54.0133723;10.0151106
+NOR013;NOR;Werftstraße 29;24939;Flensburg;DE;Werftstraße 29, 24939 Flensburg, DE;54.7998235;9.4253809
+NOR016;NOR;Augustenstraße 30a-32;24143;Kiel;DE;Augustenstraße 30a-32, 24143 Kiel, DE;54.3144533;10.1472092
+NOR022;NOR;Hafenstraße 10-30;25746;Heide;DE;Hafenstraße 10-30, 25746 Heide, DE;54.1921792;9.0916016
+NOR026;NOR;Kurt-Schumacher-Platz 4;24109;Kiel;DE;Kurt-Schumacher-Platz 4, 24109 Kiel, DE;54.3232444;10.0538750
+NOR031;NOR;Goethestraße 11;24534;Neumünster;DE;Goethestraße 11, 24534 Neumünster, DE;54.0811006;9.9948198
+NOR041;NOR;Friesische Straße 156;24937;Flensburg;DE;Friesische Straße 156, 24937 Flensburg, DE;54.7786733;9.4177963
+NOR049;NOR;Schleswiger Chaussee 45;24768;Rendsburg;DE;Schleswiger Chaussee 45, 24768 Rendsburg, DE;54.3125648;9.6443894
+NOR055;NOR;Konrad-Adenauer-Straße 3;24768;Rendsburg;DE;Konrad-Adenauer-Straße 3, 24768 Rendsburg, DE;54.3016284;9.6738963
+NOR059;NOR;Brauner Berg 9;24159;Kiel;DE;Brauner Berg 9, 24159 Kiel, DE;54.3996148;10.1829819
+NOR072;NOR;Mühlendamm 1;24113;Kiel;DE;Mühlendamm 1, 24113 Kiel, DE;54.3127378;10.0982067
+NOR084;NOR;Langer Rehm 10;24149;Kiel;DE;Langer Rehm 10, 24149 Kiel, DE;54.3343685;10.1904049
+NOR097;NOR;Prinz-Heinrich-Straße 20;24106;Kiel;DE;Prinz-Heinrich-Straße 20, 24106 Kiel, DE;54.3599655;10.1336428
+NOR102;NOR;Stormarnstraße 29;24113;Kiel;DE;Stormarnstraße 29, 24113 Kiel, DE;54.3050089;10.1277572
+NOR105;NOR;Preusserstraße 1-9;24105;Kiel;DE;Preusserstraße 1-9, 24105 Kiel, DE;54.3294082;10.1338522
+NOR106;NOR;Ostring 232;24148;Kiel;DE;Ostring 232, 24148 Kiel, DE;54.3123630;10.1593811
+NOR112;NOR;Tornescher Hof 1-5;25436;Tornesch;DE;Tornescher Hof 1-5, 25436 Tornesch, DE;53.6966184;9.7139407
+NOR113;NOR;Grüner Weg 3;25462;Rellingen;DE;Grüner Weg 3, 25462 Rellingen, DE;53.6536640;9.8235140
+NOR118;NOR;Feldstraße 5;22880;Wedel;DE;Feldstraße 5, 22880 Wedel, DE;53.5778430;9.7068182
+NOR131;NOR;Wedenkamp 9b;25335;Elmshorn;DE;Wedenkamp 9b, 25335 Elmshorn, DE;53.7519455;9.6486196
+NOR132;NOR;Hainholzer Damm 9a;25337;Elmshorn;DE;Hainholzer Damm 9a, 25337 Elmshorn, DE;53.7452430;9.6722833
+RAD001;RAD;Schlagbaumer Straße 126;42653;Solingen;DE;Schlagbaumer Straße 126, 42653 Solingen, DE;51.1893809;7.0777226
+RAD006;RAD;Weyerstraße 306;42719;Solingen;DE;Weyerstraße 306, 42719 Solingen, DE;51.1797358;7.0333133
+RAD007;RAD;Hohe Steinert 5;58509;Lüdenscheid;DE;Hohe Steinert 5, 58509 Lüdenscheid, DE;51.2274028;7.6070424
+RAD009;RAD;Bräuckenstraße 83;58511;Lüdenscheid;DE;Bräuckenstraße 83, 58511 Lüdenscheid, DE;51.2175679;7.6537141
+RAD012;RAD;Kölner Straße 90;58509;Lüdenscheid;DE;Kölner Straße 90, 58509 Lüdenscheid, DE;51.2150266;7.6157359
+RAD017;RAD;Parkstraße 2;42489;Wülfrath;DE;Parkstraße 2, 42489 Wülfrath, DE;51.2803454;7.0352600
+RAD019;RAD;Wülfrather Straße 25;42553;Velbert;DE;Wülfrather Straße 25, 42553 Velbert, DE;51.3120879;7.0672569
+RAD024;RAD;Am Buschberg 50;42549;Velbert;DE;Am Buschberg 50, 42549 Velbert, DE;51.3460542;7.0281475
+RAD038;RAD;Heinrichstraße 6;58791;Werdohl;DE;Heinrichstraße 6, 58791 Werdohl, DE;51.2588263;7.7569303
+RAD040;RAD;Höseler Straße 65;42579;Heiligenhaus;DE;Höseler Straße 65, 42579 Heiligenhaus, DE;51.3247942;6.9436295
+RAD054;RAD;Bahnhofsplatz 24;42499;Hückeswagen;DE;Bahnhofsplatz 24, 42499 Hückeswagen, DE;51.1517819;7.3423022
+RAD055;RAD;Friedrich-Ebert-Straße 294-296;58566;Kierspe;DE;Friedrich-Ebert-Straße 294-296, 58566 Kierspe, DE;51.1265063;7.5998389
+RAD060;RAD;Briller Straße 179;42105;Wuppertal;DE;Briller Straße 179, 42105 Wuppertal, DE;51.2630360;7.1313358
+RAD061;RAD;Unterdörnen 80;42283;Wuppertal;DE;Unterdörnen 80, 42283 Wuppertal, DE;51.2685549;7.1923366
+RAD068;RAD;Steinbecker Meile 6;42117;Wuppertal;DE;Steinbecker Meile 6, 42117 Wuppertal, DE;51.2493947;7.1342576
+RAD069;RAD;Klotzbahn 5;42105;Wuppertal;DE;Klotzbahn 5, 42105 Wuppertal, DE;51.2600228;7.1448059
+RAD072;RAD;Ronsdorfer Straße 2;42119;Wuppertal;DE;Ronsdorfer Straße 2, 42119 Wuppertal, DE;51.2535455;7.1549219
+RAD074;RAD;Benrather Straße 14;42115;Wuppertal;DE;Benrather Straße 14, 42115 Wuppertal, DE;51.2539458;7.1003730
+RAD075;RAD;Kaiserstraße 33;42327;Wuppertal;DE;Kaiserstraße 33, 42327 Wuppertal, DE;51.2327688;7.0725062
+RAD076;RAD;Altenaer Straße 29;58762;Altena;DE;Altenaer Straße 29, 58762 Altena, DE;51.2976199;7.7478612
+RAD079;RAD;Rutenbecker Weg 3;42327;Wuppertal;DE;Rutenbecker Weg 3, 42327 Wuppertal, DE;51.2378657;7.0982400
+RAD090;RAD;Hagener Straße 9;57072;Siegen;DE;Hagener Straße 9, 57072 Siegen, DE;50.8825373;8.0282003
+RAD098;RAD;Alte Schulstraße 2;57223;Kreuztal;DE;Alte Schulstraße 2, 57223 Kreuztal, DE;50.9350813;8.0051117
+RAD103;RAD;Hundemstraße 44;57368;Lennestadt;DE;Hundemstraße 44, 57368 Lennestadt, DE;51.1025376;8.0712437
+RAD111;RAD;Klingelholl 110;42281;Wuppertal;DE;Klingelholl 110, 42281 Wuppertal, DE;51.2805578;7.2036151
+RAD112;RAD;Weiherstraße 7;42277;Wuppertal;DE;Weiherstraße 7, 42277 Wuppertal, DE;51.2861119;7.2281030
+RAD113;RAD;Bredde 36;42275;Wuppertal;DE;Bredde 36, 42275 Wuppertal, DE;51.2750564;7.2094168
+SEE008;SEE;Kandinskyallee 4-12;22115;Hamburg;DE;Kandinskyallee 4-12, 22115 Hamburg, DE;53.5256002;10.1507408
+SEE017;SEE;Lüneburger Straße 39;21073;Hamburg;DE;Lüneburger Straße 39, 21073 Hamburg, DE;53.4601049;9.9815366
+SEE031;SEE;Dratelnstraße 23-25;21109;Hamburg;DE;Dratelnstraße 23-25, 21109 Hamburg, DE;53.5013444;10.0025654
+SEE071;SEE;Eiffestraße 406-418;20537;Hamburg;DE;Eiffestraße 406-418, 20537 Hamburg, DE;53.5505589;10.0619099
+SEE072;SEE;Seeveplatz 1;21073;Hamburg;DE;Seeveplatz 1, 21073 Hamburg, DE;53.4589890;9.9867192
+SEE075;SEE;Wandsbeker Marktstraße 103-107;22041;Hamburg;DE;Wandsbeker Marktstraße 103-107, 22041 Hamburg, DE;53.5728661;10.0681643
+SEE089;SEE;Möllner Landstraße 131;22117;Hamburg;DE;Möllner Landstraße 131, 22117 Hamburg, DE;53.5388372;10.1231606
+SEF014;SEF;Frankfurter Allee 144;10365;Berlin;DE;Frankfurter Allee 144, 10365 Berlin, DE;52.5119175;13.4817759
+SEF035;SEF;Senftenberger Ring 17;13439;Berlin;DE;Senftenberger Ring 17, 13439 Berlin, DE;52.5990860;13.3546038
+SEF038;SEF;Marzahner Chaussee 218;12681;Berlin;DE;Marzahner Chaussee 218, 12681 Berlin, DE;52.5250592;13.5346989
+SEF042;SEF;Tangermünder Straße 125;12627;Berlin;DE;Tangermünder Straße 125, 12627 Berlin, DE;52.5400021;13.6086235
+SEF053;SEF;Leipziger Platz 12;10117;Berlin;DE;Leipziger Platz 12, 10117 Berlin, DE;52.5105630;13.3809599
+SEF066;SEF;Jan-Petersen-Straße 16;12679;Berlin;DE;Jan-Petersen-Straße 16, 12679 Berlin, DE;52.5496535;13.5638139
+SEF068;SEF;Havemannstraße 33;12689;Berlin;DE;Havemannstraße 33, 12689 Berlin, DE;52.5667178;13.5784781
+SEF081;SEF;Ollenhauerstraße 106;13403;Berlin;DE;Ollenhauerstraße 106, 13403 Berlin, DE;52.5707046;13.3280494
+SEF083;SEF;Müllerstraße 128;13349;Berlin;DE;Müllerstraße 128, 13349 Berlin, DE;52.5524232;13.3480665
+SEF085;SEF;Gerichtstraße 2-3;13347;Berlin;DE;Gerichtstraße 2-3, 13347 Berlin, DE;52.5426182;13.3784914
+SEF089;SEF;Friedrichstraße 149;10117;Berlin;DE;Friedrichstraße 149, 10117 Berlin, DE;52.5188736;13.3879581
+SHO001;SHO;Werner-Bock-Straße 38;33602;Bielefeld;DE;Werner-Bock-Straße 38, 33602 Bielefeld, DE;52.0251311;8.5503818
+SHO010;SHO;Borchener Straße 25;33098;Paderborn;DE;Borchener Straße 25, 33098 Paderborn, DE;51.7120946;8.7464493
+SHO018;SHO;Pohlweg 110;33100;Paderborn;DE;Pohlweg 110, 33100 Paderborn, DE;51.7037055;8.7703065
+SHO020;SHO;Kampstraße 20/22;33332;Gütersloh;DE;Kampstraße 20/22, 33332 Gütersloh, DE;51.9020685;8.3975197
+SHO022;SHO;Grosse-Kurfürsten-Straße 82;33615;Bielefeld;DE;Grosse-Kurfürsten-Straße 82, 33615 Bielefeld, DE;52.0264986;8.5277741
+SHO041;SHO;Windelsbleicher Straße 239a;33659;Bielefeld;DE;Windelsbleicher Straße 239a, 33659 Bielefeld, DE;51.9691290;8.5189541
+SHO049;SHO;Hauptstraße 53;33647;Bielefeld;DE;Hauptstraße 53, 33647 Bielefeld, DE;51.9883524;8.5129882
+SHO052;SHO;Hansestraße 1;33689;Bielefeld;DE;Hansestraße 1, 33689 Bielefeld, DE;51.9516791;8.5711324
+SHO056;SHO;Beckhausstraße 64;33611;Bielefeld;DE;Beckhausstraße 64, 33611 Bielefeld, DE;52.0383516;8.5444649
+SHO058;SHO;Haegestraße 2;33330;Gütersloh;DE;Haegestraße 2, 33330 Gütersloh, DE;51.9174716;8.3713859
+SHO061;SHO;Wiedenbrücker Straße 45;59555;Lippstadt;DE;Wiedenbrücker Straße 45, 59555 Lippstadt, DE;51.6885006;8.3415226
+SHO071;SHO;Detmolder Straße 221-225;33175;Bad Lippspringe;DE;Detmolder Straße 221-225, 33175 Bad Lippspringe, DE;51.7889074;8.8248524
+SHO074;SHO;Hans-Böckler-Straße 32;33334;Gütersloh;DE;Hans-Böckler-Straße 32, 33334 Gütersloh, DE;51.8879050;8.3571282
+SHO080;SHO;Osnabrücker Landstraße 1;33335;Gütersloh;DE;Osnabrücker Landstraße 1, 33335 Gütersloh, DE;51.9112662;8.4249962
+SHO082;SHO;Rabenhof 78;33609;Bielefeld;DE;Rabenhof 78, 33609 Bielefeld, DE;52.0516785;8.5938880
+SHO085;SHO;Fuchsbreite 19-23;49186;Bad Iburg;DE;Fuchsbreite 19-23, 49186 Bad Iburg, DE;52.1525585;8.0370949
+SHO093;SHO;An der Tonkuhle 2;33617;Bielefeld;DE;An der Tonkuhle 2, 33617 Bielefeld, DE;52.0081538;8.5197202
+SHO105;SHO;Ingolstädter Weg 13;33102;Paderborn;DE;Ingolstädter Weg 13, 33102 Paderborn, DE;51.7453204;8.7571850
+SHO126;SHO;Westring 64;32051;Herford;DE;Westring 64, 32051 Herford, DE;52.1182110;8.6542624
+SHO143;SHO;Universitätsstraße 8;35037;Marburg;DE;Universitätsstraße 8, 35037 Marburg, DE;50.8067182;8.7692736
+SHO144;SHO;Erlenring 9;35037;Marburg;DE;Erlenring 9, 35037 Marburg, DE;50.8069084;8.7773399
+SIE001;SIE;Rundestraße 6;30161;Hannover;DE;Rundestraße 6, 30161 Hannover, DE;52.3801969;9.7372504
+SIE004;SIE;Porschestraße 102;38440;Wolfsburg;DE;Porschestraße 102, 38440 Wolfsburg, DE;52.4188355;10.7842958
+SIE043;SIE;Wülferoder Straße 51;30539;Hannover;DE;Wülferoder Straße 51, 30539 Hannover, DE;52.3390846;9.8336587
+SIE046;SIE;Zur Stadtgärtnerei 1;30657;Hannover;DE;Zur Stadtgärtnerei 1, 30657 Hannover, DE;52.4253497;9.7816216
+SIE162;SIE;Piepmühle 5;31542;Bad Nenndorf;DE;Piepmühle 5, 31542 Bad Nenndorf, DE;52.3356066;9.4036611
+WEI010;WEI;Oststraße 54-56;99867;Gotha;DE;Oststraße 54-56, 99867 Gotha, DE;50.9535656;10.7161917
+WEI036;WEI;Altstadtstraße 2-4;99817;Eisenach;DE;Altstadtstraße 2-4, 99817 Eisenach, DE;50.9757165;10.3375243
+WEI037;WEI;Kreuzgraben 5;99974;Mühlhausen;DE;Kreuzgraben 5, 99974 Mühlhausen, DE;51.2119568;10.4632624
+WEI038;WEI;Berliner Platz 4;99091;Erfurt;DE;Berliner Platz 4, 99091 Erfurt, DE;51.0043372;11.0041993
+WEI052;WEI;Ziolkowskistraße 25;98693;Ilmenau;DE;Ziolkowskistraße 25, 98693 Ilmenau, DE;50.6959664;10.9237984
+WEI054;WEI;Augustmauer 4;99084;Erfurt;DE;Augustmauer 4, 99084 Erfurt, DE;50.9738405;11.0336878
+WEI056;WEI;Coburger Platz 2;99867;Gotha;DE;Coburger Platz 2, 99867 Gotha, DE;50.9454357;10.6851477
+WEI059;WEI;Leutragraben 1;07743;Jena;DE;Leutragraben 1, 07743 Jena, DE;50.9288361;11.5845832
+WEI066;WEI;Franz-Julius-Hoeltz-Straße 3;06618;Naumburg (Saale);DE;Franz-Julius-Hoeltz-Straße 3, 06618 Naumburg (Saale), DE;51.1486806;11.8240841
+WEI077;WEI;Otto-Rothe-Straße 26;07549;Gera;DE;Otto-Rothe-Straße 26, 07549 Gera, DE;50.8389426;12.0645944
+WEI083;WEI;Reichenbacher Straße 105;07973;Greiz;DE;Reichenbacher Straße 105, 07973 Greiz, DE;50.6520105;12.2242349
+WER008;WER;Ostbredenstraße 77;59229;Ahlen;DE;Ostbredenstraße 77, 59229 Ahlen, DE;51.7598966;7.9086095
+WER028;WER;Werler Straße 244;59063;Hamm;DE;Werler Straße 244, 59063 Hamm, DE;51.6609568;7.8335803
+WER029;WER;Kaiser-Otto-Weg 7;59494;Soest;DE;Kaiser-Otto-Weg 7, 59494 Soest, DE;51.5566136;8.1076368
+WER038;WER;Bahnhofstraße 4-8;58675;Hemer;DE;Bahnhofstraße 4-8, 58675 Hemer, DE;51.3836716;7.7675450
+WER043;WER;Zum Schützenhof 51;59821;Arnsberg;DE;Zum Schützenhof 51, 59821 Arnsberg, DE;51.3958452;8.0764173
+WER055;WER;Lohauserholzstraße 4b;59067;Hamm;DE;Lohauserholzstraße 4b, 59067 Hamm, DE;51.6640950;7.7863483
+WER057;WER;Kamener Straße 11;59425;Unna;DE;Kamener Straße 11, 59425 Unna, DE;51.5620481;7.6801233
+WER061;WER;Dortmunder Straße 253;59077;Hamm;DE;Dortmunder Straße 253, 59077 Hamm, DE;51.6616344;7.7432809
+WER065;WER;Bahnhofstraße 7;45549;Sprockhövel;DE;Bahnhofstraße 7, 45549 Sprockhövel, DE;51.3657243;7.2438630
+WER076;WER;Wannestraße 2;59823;Arnsberg;DE;Wannestraße 2, 59823 Arnsberg, DE;51.4169157;8.0451498
+WER081;WER;Zollstraße 1;58089;Hagen;DE;Zollstraße 1, 58089 Hagen, DE;51.3692906;7.4629340
+WER082;WER;Wehringhauser Straße 81-85;58089;Hagen;DE;Wehringhauser Straße 81-85, 58089 Hagen, DE;51.3537079;7.4512484
+WER083;WER;Schwerter Straße 192;58099;Hagen;DE;Schwerter Straße 192, 58099 Hagen, DE;51.3997117;7.4771963
+WER084;WER;Ophauser Straße 36;58089;Hagen;DE;Ophauser Straße 36, 58089 Hagen, DE;51.3866230;7.4358964
+WER087;WER;Boeler Straße 121;58097;Hagen;DE;Boeler Straße 121, 58097 Hagen, DE;51.3779323;7.4735437
+WER088;WER;Enneper Straße 146a;58135;Hagen;DE;Enneper Straße 146a, 58135 Hagen, DE;51.3405022;7.3946782
+WER093;WER;Poststraße 59;57319;Bad Berleburg;DE;Poststraße 59, 57319 Bad Berleburg, DE;51.0544924;8.3939297
+WEY006;WEY;Osenbrückstraße 5;28309;Bremen;DE;Osenbrückstraße 5, 28309 Bremen, DE;53.0598334;8.8879706
+WEY009;WEY;Alter Dorfweg 30-50;28259;Bremen;DE;Alter Dorfweg 30-50, 28259 Bremen, DE;53.0483493;8.7444784
+WEY010;WEY;Westerstraße 33;28199;Bremen;DE;Westerstraße 33, 28199 Bremen, DE;53.0740205;8.7977761
+WEY011;WEY;Theodor-Heuss-Allee 6;28215;Bremen;DE;Theodor-Heuss-Allee 6, 28215 Bremen, DE;53.0846026;8.8140737
+WEY014;WEY;Konsul-Smidt-Straße 8;28217;Bremen;DE;Konsul-Smidt-Straße 8, 28217 Bremen, DE;53.0876467;8.7807371
+WEY015;WEY;Waller Heerstraße 101;28219;Bremen;DE;Waller Heerstraße 101, 28219 Bremen, DE;53.1017011;8.7868165
+WEY020;WEY;Kattenturmer Heerstraße 326;28277;Bremen;DE;Kattenturmer Heerstraße 326, 28277 Bremen, DE;53.0320201;8.8111323
+WEY027;WEY;Hammersbecker Straße 87;28755;Bremen;DE;Hammersbecker Straße 87, 28755 Bremen, DE;53.1844195;8.6178941
+WEY030;WEY;Emil-von-Behring-Straße 4;28207;Bremen;DE;Emil-von-Behring-Straße 4, 28207 Bremen, DE;53.0683975;8.8649816
+WEY036;WEY;Hans-Bredow-Straße 19;28307;Bremen;DE;Hans-Bredow-Straße 19, 28307 Bremen, DE;53.0491609;8.9580398
+WEY037;WEY;Schevemoorer Landstraße 14-20;28325;Bremen;DE;Schevemoorer Landstraße 14-20, 28325 Bremen, DE;53.0781242;8.9432065
+WEY039;WEY;Berliner Freiheit 14;28327;Bremen;DE;Berliner Freiheit 14, 28327 Bremen, DE;53.0800960;8.8937767
+WEY040;WEY;Vahrer Straße 279/281;28329;Bremen;DE;Vahrer Straße 279/281, 28329 Bremen, DE;53.0764092;8.8834458
+WEY043;WEY;Ritterhuder Heerstraße 6;28239;Bremen;DE;Ritterhuder Heerstraße 6, 28239 Bremen, DE;53.1347569;8.7368725
+WEY050;WEY;Volkmannstraße 2;28201;Bremen;DE;Volkmannstraße 2, 28201 Bremen, DE;53.0576761;8.8094447
+WEY056;WEY;Lindenhofstraße 1 - 15;28237;Bremen;DE;Lindenhofstraße 1 - 15, 28237 Bremen, DE;53.1155914;8.7577709
+WEY058;WEY;Weberstraße 7;27753;Delmenhorst;DE;Weberstraße 7, 27753 Delmenhorst, DE;53.0554698;8.6303103
+WEY066;WEY;Hemmstraße 353-357;28215;Bremen;DE;Hemmstraße 353-357, 28215 Bremen, DE;53.1009886;8.8151338
+WEY072;WEY;Elbestraße 95;27570;Bremerhaven;DE;Elbestraße 95, 27570 Bremerhaven, DE;53.5403163;8.5906733
+WEY074;WEY;Enrique-Schmidt-Straße 1;28359;Bremen;DE;Enrique-Schmidt-Straße 1, 28359 Bremen, DE;53.1047431;8.8532319
+WEY078;WEY;Stresemannstraße 150;27576;Bremerhaven;DE;Stresemannstraße 150, 27576 Bremerhaven, DE;53.5580420;8.5941736
+WEY080;WEY;Hermann-Fortmann-Straße 21;28759;Bremen;DE;Hermann-Fortmann-Straße 21, 28759 Bremen, DE;53.1701222;8.6352240
+WEY083;WEY;Weserstrandstraße 17;28779;Bremen;DE;Weserstrandstraße 17, 28779 Bremen, DE;53.1798550;8.5702471
+WEY088;WEY;Schwaneweder Straße 27;28779;Bremen;DE;Schwaneweder Straße 27, 28779 Bremen, DE;53.1987972;8.5724275
+WEY090;WEY;Dötlinger Straße 10-12;28197;Bremen;DE;Dötlinger Straße 10-12, 28197 Bremen, DE;53.0801455;8.7710029
+WEY091;WEY;Langener Landstraße 160;27580;Bremerhaven;DE;Langener Landstraße 160, 27580 Bremerhaven, DE;53.5804188;8.5986697
+WEY092;WEY;Hans-Böckler-Straße 38;27578;Bremerhaven;DE;Hans-Böckler-Straße 38, 27578 Bremerhaven, DE;53.5892625;8.6183254
+WIL003;WIL;Straßburger Platz 1;01307;Dresden;DE;Straßburger Platz 1, 01307 Dresden, DE;51.0464162;13.7568016
+WIL013;WIL;Siegfried-Rädel-Straße 3;01809;Heidenau;DE;Siegfried-Rädel-Straße 3, 01809 Heidenau, DE;50.9817228;13.8596548
+WIL024;WIL;Kesselsdorfer Straße 160;01169;Dresden;DE;Kesselsdorfer Straße 160, 01169 Dresden, DE;51.0403480;13.6672265
+WIL045;WIL;Prager Straße 11;01069;Dresden;DE;Prager Straße 11, 01069 Dresden, DE;51.0444613;13.7348748
+WIL048;WIL;Raimundstraße 1-3;01157;Dresden;DE;Raimundstraße 1-3, 01157 Dresden, DE;51.0571074;13.6875385
+WIL068;WIL;Dresdner Straße 33;01558;Großenhain;DE;Dresdner Straße 33, 01558 Großenhain, DE;51.2889050;13.5326263
+WIL075;WIL;Dr.-Frieda-Freise Str. 3;09111;Chemnitz;DE;Dr.-Frieda-Freise Str. 3, 09111 Chemnitz, DE;50.8332252;12.9267500
+WIL097;WIL;Dr.-Salvador-Allende-Straße 1;09119;Chemnitz;DE;Dr.-Salvador-Allende-Straße 1, 09119 Chemnitz, DE;50.8093066;12.8915514
+WIL111;WIL;Theaterstraße 7;09111;Chemnitz;DE;Theaterstraße 7, 09111 Chemnitz, DE;50.8350719;12.9192540
+WIL114;WIL;Welzower Straße 26a;03048;Cottbus;DE;Welzower Straße 26a, 03048 Cottbus, DE;51.7403217;14.3235167
+BAR010;BAR;Ottenser Hauptstraße 10;22765;Hamburg;DE;Ottenser Hauptstraße 10, 22765 Hamburg, DE;53.5525254;9.9316418
+MUN048;MUN;Werner-von-Siemens-Straße 5;37077;Göttingen;DE;Werner-von-Siemens-Straße 5, 37077 Göttingen, DE;51.5580424;9.9305906
+MUN054;MUN;Grebensteiner Straße 13;34376;Immenhausen;DE;Grebensteiner Straße 13, 34376 Immenhausen, DE;51.4290637;9.4683094
+SIE103;SIE;Gravelottestraße 1;31134;Hildesheim;DE;Gravelottestraße 1, 31134 Hildesheim, DE;52.1474181;9.9631086
+WER074;WER;Bahnhofstraße 40;59581;Warstein;DE;Bahnhofstraße 40, 59581 Warstein, DE;51.4879305;8.3363471
+RAD057;RAD;Theodor-Heuss-Platz 7;42853;Remscheid;DE;Theodor-Heuss-Platz 7, 42853 Remscheid, DE;51.1823477;7.1874245
+SEE043;SEE;Horner Landstraße 110;22111;Hamburg;DE;Horner Landstraße 110, 22111 Hamburg, DE;53.5510651;10.0747942
+SIE056;SIE;Vahrenwalder Straße 252;30179;Hannover;DE;Vahrenwalder Straße 252, 30179 Hannover, DE;52.4134145;9.7360427
+SEE049;SEE;Freiburger Straße 60;21682;Stade;DE;Freiburger Straße 60, 21682 Stade, DE;53.6097341;9.4779851
+SEE113;SEE;Wallstraße 68;19053;Schwerin;DE;Wallstraße 68, 19053 Schwerin, DE;53.6239190;11.4024008

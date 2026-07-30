@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standortkarte</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div>
+          <h1>Standortkarte</h1>
+          <p>Suche nach Name, Adresse oder RG. RG-Auswahl hebt passende Standorte farblich hervor.</p>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label for="searchInput">Suche</label>
+        <input id="searchInput" type="text" placeholder="Name, Adresse oder RG" />
+      </div>
+
+      <div class="control-group">
+        <label for="rgFilter">RG hervorheben</label>
+        <select id="rgFilter">
+          <option value="">Keine Auswahl</option>
+        </select>
+      </div>
+
+      <div class="button-row">
+        <button id="resetBtn" type="button">Zurücksetzen</button>
+        <button id="fitBtn" type="button">Alle Treffer zeigen</button>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item"><span class="dot dot-primary"></span>hervorgehobene RG</div>
+        <div class="legend-item"><span class="dot dot-muted"></span>sonstige Treffer</div>
+      </div>
+
+      <div id="summary" class="summary"></div>
+      <div id="emptyState" class="empty-state" hidden>Keine Treffer für diese Auswahl.</div>
+      <ul id="resultList" class="result-list"></ul>
+    </aside>
+
+    <main class="map-panel">
+      <div id="map"></div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
