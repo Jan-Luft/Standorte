@@ -1,3 +1,47 @@
+const rgColorMap = {
+  BAR: '#2783de',
+  DAT: '#46A171',
+  GRO: '#D5803B',
+  HER: '#E56458',
+  HES: '#8B5CF6',
+  JAR: '#14B8A6',
+  LIN: '#F59E0B',
+  MEI: '#6366F1',
+  MUN: '#10B981',
+  NOR: '#0EA5E9',
+  RAD: '#EF4444',
+  SEE: '#EC4899',
+  SEF: '#84CC16',
+  SHO: '#F97316',
+  SIE: '#06B6D4',
+  WEI: '#A855F7',
+  WER: '#22C55E',
+  WEY: '#3B82F6',
+  WIL: '#F43F5E'
+};
+
+const fallbackColors = [
+  '#5E9FE8',
+  '#EAC26B',
+  '#72BC8F',
+  '#BF8EDA',
+  '#DE9255',
+  '#DF84A8',
+  '#4FB9C9',
+  '#E97366'
+];
+
+function colorForRG(rg) {
+  if (rgColorMap[rg]) return rgColorMap[rg];
+
+  let hash = 0;
+  for (const ch of (rg || '')) {
+    hash = ((hash << 5) - hash) + ch.charCodeAt(0);
+    hash |= 0;
+  }
+  return fallbackColors[Math.abs(hash) % fallbackColors.length];
+}
+
 const map = L.map('map', { zoomControl: true }).setView([51.2, 10.4], 6);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
