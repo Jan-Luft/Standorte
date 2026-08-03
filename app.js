@@ -148,12 +148,14 @@ function setActiveLayer(isFiltered) {
   return clusterGroup;
 }
 
-function markerStyle(isFiltered) {
+function markerStyle(row, isFiltered) {
+  const color = colorForRG(row.RG);
+
   if (!isFiltered) {
     return {
       radius: 7,
-      color: '#2783de',
-      fillColor: '#2783de',
+      color,
+      fillColor: color,
       fillOpacity: 0.84,
       weight: 1.5
     };
@@ -161,8 +163,8 @@ function markerStyle(isFiltered) {
 
   return {
     radius: 8,
-    color: '#2783de',
-    fillColor: '#2783de',
+    color,
+    fillColor: color,
     fillOpacity: 0.9,
     weight: 2
   };
@@ -196,7 +198,7 @@ function renderMarkers(split) {
   const activeLayer = setActiveLayer(split.isFiltered);
 
   for (const row of split.visible) {
-    const marker = L.circleMarker([row.Latitude, row.Longitude], markerStyle(split.isFiltered));
+    const marker = L.circleMarker([row.Latitude, row.Longitude], markerStyle(row, split.isFiltered));
     marker.bindPopup(popupHtml(row));
     activeLayer.addLayer(marker);
     markerByName.set(row.Name, marker);
