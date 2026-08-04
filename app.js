@@ -60,6 +60,10 @@ map.addLayer(clusterGroup);
 let allRows = [];
 let markerByName = new Map();
 
+const PASSWORD_HASH = "8b7986e7d544fe8afc1914a09afc2c7de7a12c75f296e7293f23b426b5452bcf";
+const SESSION_KEY = "standortkarte_unlocked";
+let appStarted = false;
+
 const rgMeta = {
   BAR: { number: 16 },
   DAT: { number: 32 },
@@ -298,6 +302,64 @@ function applyFilters(refit = false) {
   }
 }
 
+async function sha256Hex(value) {
+  const buffer = await crypto.subtle.digest(
+    "SHA-256",
+    new TextEncoder().encode(value)
+  );
+  return [...new Uint8Array(buffer)]
+    .map(byte => byte.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+function showApp() {
+  document.getElementById("passwordGate").hidden = true;
+  document.getElementById("appShell").hidden = false;
+
+  setTimeout(() => {
+    map.invalidateSize();
+  }, 0);
+}
+
+function startApp() {
+  if (!appStarted) {
+    loadData();
+    appStarted = true;
+  }
+  showApp();
+}
+
+async function initPasswordGate() {
+  if (localStorage.getItem(SESSION_KEY) === "1") {
+    startApp();
+    return;
+  }
+
+  const form = document.getElementById("passwordForm");
+  const input = document.getElementById("passwordInput");
+  const error = document.getElementById("passwordError");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    error.hidden = true;
+
+    const enteredPassword = input.value;
+    const enteredHash = await sha256Hex(enteredPassword);
+
+    if (enteredHash === PASSWORD_HASH) {
+      sessionStorage.setItem(SESSION_KEY, "1");
+      startApp();
+      return;
+    }
+
+    input.value = "";
+    error.hidden = false;
+    input.focus();
+  });
+
+  input.focus();
+}
+
 document.getElementById('searchInput').addEventListener('input', () => applyFilters(false));
 document.getElementById('rgFilter').addEventListener('change', () => applyFilters(true));
 document.getElementById('resetBtn').addEventListener('click', () => {
@@ -307,4 +369,4 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 });
 document.getElementById('fitBtn').addEventListener('click', () => applyFilters(true));
 
-loadData();
+initPasswordGate();
