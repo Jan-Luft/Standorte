@@ -60,7 +60,7 @@ map.addLayer(clusterGroup);
 let allRows = [];
 let markerByName = new Map();
 
-const PASSWORD_HASH = "8b7986e7d544fe8afc1914a09afc2c7de7a12c75f296e7293f23b426b5452bcf";
+const PASSWORD_HASH = "7f291dcac3707871ca411036f08a1c389cf11d5d45013ca36eb684614866f057";
 const SESSION_KEY = "standortkarte_unlocked";
 let appStarted = false;
 
