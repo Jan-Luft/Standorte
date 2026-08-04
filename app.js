@@ -60,6 +60,36 @@ map.addLayer(clusterGroup);
 let allRows = [];
 let markerByName = new Map();
 
+const rgMeta = {
+  BAR: { number: 16 },
+  DAT: { number: 32 },
+  GRO: { number: 20 },
+  HER: { number: 1 },
+  HES: { number: 15 },
+  JAR: { number: 29 },
+  LIN: { number: 25 },
+  MEI: { number: 26 },
+  MUN: { number: 10 },
+  NOR: { number: 4 },
+  RAD: { number: 2 },
+  SEE: { number: 3 },
+  SEF: { number: 24 },
+  SHO: { number: 5 },
+  SIE: { number: 6 },
+  WEI: { number: 31 },
+  WER: { number: 13 },
+  WEY: { number: 7 },
+  WIL: { number: 36 }
+};
+
+function formatRG(rg) {
+  const meta = rgMeta[rg];
+  if (!meta || !meta.number) {
+    return rg;
+  }
+  return `${rg} (${meta.number})`;
+}
+
 function loadData() {
   Papa.parse('data/standorte.csv', {
     download: true,
@@ -93,7 +123,7 @@ function populateRGFilter(rows) {
   for (const rg of rgs) {
     const option = document.createElement('option');
     option.value = rg;
-    option.textContent = rg;
+    option.textContent = formatRG(rg);
     select.appendChild(option);
   }
 }
@@ -108,7 +138,7 @@ function getQuery() {
 
 function matchesQuery(row, query) {
   if (!query) return true;
-  const haystack = [row.Name, row.RG, row.StrasseHausnummer, row.PLZ, row.Ort, row.AdresseVoll]
+  const haystack = [row.Name, row.RG, formatRG(row.RG), row.StrasseHausnummer, row.PLZ, row.Ort, row.AdresseVoll]
     .filter(Boolean)
     .join(' ')
     .toLowerCase();
@@ -175,7 +205,7 @@ function popupHtml(row) {
   const routeUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
   return `
     <div class="popup-title">${escapeHtml(row.Name)}</div>
-    <div class="popup-meta">RG ${escapeHtml(row.RG)}</div>
+    <div class="popup-meta">RG ${escapeHtml(formatRG(row.RG))}</div>
     <div>${escapeHtml(row.AdresseVoll)}</div>
     <a class="popup-link" href="${routeUrl}" target="_blank" rel="noopener noreferrer">Route öffnen</a>
   `;
@@ -212,7 +242,7 @@ function renderList(split) {
   list.innerHTML = '';
 
   if (split.selectedRG) {
-    summary.textContent = `${split.visible.length} Treffer in RG ${split.selectedRG}`;
+    summary.textContent = `${split.visible.length} Treffer in RG ${formatRG(split.selectedRG)}`;
   } else {
     summary.textContent = `${split.visible.length} Treffer`;
   }
@@ -228,7 +258,7 @@ function renderList(split) {
 
     li.innerHTML = `
       <div class="result-title">${escapeHtml(row.Name)}</div>
-      <div class="result-meta">RG ${escapeHtml(row.RG)} · ${escapeHtml(row.PLZ)} ${escapeHtml(row.Ort)}</div>
+      <div class="result-meta">RG ${escapeHtml(formatRG(row.RG))} · ${escapeHtml(row.PLZ)} ${escapeHtml(row.Ort)}</div>
       <div class="result-address">${escapeHtml(row.AdresseVoll)}</div>
     `;
 
