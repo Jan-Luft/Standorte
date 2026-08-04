@@ -61,33 +61,34 @@ let allRows = [];
 let markerByName = new Map();
 
 const rgMeta = {
-  BAR: { number: 016 },
-  DAT: { number: 032 },
-  GRO: { number: 020 },
-  HER: { number: 001 },
-  HES: { number: 015 },
-  JAR: { number: 029 },
-  LIN: { number: 025 },
-  MEI: { number: 026 },
-  MUN: { number: 010 },
-  NOR: { number: 004 },
-  RAD: { number: 002 },
-  SEE: { number: 003 },
-  SEF: { number: 024 },
-  SHO: { number: 005 },
-  SIE: { number: 006 },
-  WEI: { number: 031 },
-  WER: { number: 013 },
-  WEY: { number: 007 },
-  WIL: { number: 036 }
+  BAR: { number: 16 },
+  DAT: { number: 32 },
+  GRO: { number: 20 },
+  HER: { number: 1 },
+  HES: { number: 15 },
+  JAR: { number: 29 },
+  LIN: { number: 25 },
+  MEI: { number: 26 },
+  MUN: { number: 10 },
+  NOR: { number: 4 },
+  RAD: { number: 2 },
+  SEE: { number: 3 },
+  SEF: { number: 24 },
+  SHO: { number: 5 },
+  SIE: { number: 6 },
+  WEI: { number: 31 },
+  WER: { number: 13 },
+  WEY: { number: 7 },
+  WIL: { number: 36 }
 };
 
 function formatRG(rg) {
   const meta = rgMeta[rg];
-  if (!meta || !meta.number) {
+  if (!meta || meta.number == null) {
     return rg;
   }
-  return `${rg} (${meta.number})`;
+  const paddedNumber = String(meta.number).padStart(3, '0');
+  return `${rg} (${paddedNumber})`;
 }
 
 function loadData() {
