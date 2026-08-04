@@ -11,7 +11,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="app-shell">
+  <div id="passwordGate" class="password-gate">
+    <form id="passwordForm" class="password-card">
+      <h1>Karte öffnen</h1>
+      <p>Bitte Passwort eingeben.</p>
+
+      <input
+        id="passwordInput"
+        type="password"
+        placeholder="Passwort"
+        autocomplete="current-password"
+        required
+      />
+
+    <button type="submit">Öffnen</button>
+    <div id="passwordError" class="password-error" hidden>Passwort falsch.</div>
+   </form>
+  </div>
+  <div class="app-shell" id="appShell" hidden>
     <aside class="sidebar">
       <div class="sidebar-header">
         <div>
