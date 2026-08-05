@@ -232,3 +232,88 @@ html, body {
   font-size: 13px;
   font-weight: 600;
 }
+
+.route-panel {
+  margin-bottom: 16px;
+  padding: 14px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.route-panel-header h2 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.route-panel-header p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.route-empty {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.route-stop-list {
+  margin: 0 0 12px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.route-stop-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.route-stop-title {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.route-stop-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.route-stop-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.route-stop-actions button,
+.route-button-row button,
+.route-add-btn {
+  min-height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.route-button-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.route-button-row button:disabled,
+.route-add-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.result-actions {
+  margin-top: 10px;
+}
