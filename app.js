@@ -414,31 +414,6 @@ function initPasswordGate() {
   input.focus();
 }
 
-  const form = document.getElementById("passwordForm");
-  const input = document.getElementById("passwordInput");
-  const error = document.getElementById("passwordError");
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    error.hidden = true;
-
-    const enteredPassword = input.value;
-    const enteredHash = await sha256Hex(enteredPassword);
-
-    if (enteredHash === PASSWORD_HASH) {
-      sessionStorage.setItem(SESSION_KEY, "1");
-      startApp();
-      return;
-    }
-
-    input.value = "";
-    error.hidden = false;
-    input.focus();
-  });
-
-  input.focus();
-}
-
 document.getElementById('searchInput').addEventListener('input', () => applyFilters(false));
 document.getElementById('rgFilter').addEventListener('change', () => applyFilters(true));
 document.getElementById('resetBtn').addEventListener('click', () => {
