@@ -60,6 +60,8 @@ map.addLayer(clusterGroup);
 let allRows = [];
 let markerByName = new Map();
 
+let selectedRouteStops = [];
+
 const PASSWORD_HASH = "7f291dcac3707871ca411036f08a1c389cf11d5d45013ca36eb684614866f057";
 const SESSION_KEY = "standortkarte_unlocked";
 let appStarted = false;
@@ -95,6 +97,136 @@ function formatRG(rg) {
   return `${rg} (${paddedNumber})`;
 }
 
+function getStopId(row) {
+  return [row.Name, row.RG, row.Latitude, row.Longitude].join("|");
+}
+
+function isStopSelected(row) {
+  const stopId = getStopId(row);
+  return selectedRouteStops.some(stop => stop.stopId === stopId);
+}
+
+function routePoint(row) {
+  return `${row.Latitude},${row.Longitude}`;
+}
+
+function addRouteStop(row) {
+  if (isStopSelected(row)) return;
+
+  selectedRouteStops.push({
+    ...row,
+    stopId: getStopId(row)
+  });
+
+  renderRouteStops();
+  applyFilters(false);
+}
+
+function removeRouteStop(stopId) {
+  selectedRouteStops = selectedRouteStops.filter(stop => stop.stopId !== stopId);
+  renderRouteStops();
+  applyFilters(false);
+}
+
+function moveRouteStop(index, direction) {
+  const newIndex = index + direction;
+  if (newIndex < 0 || newIndex >= selectedRouteStops.length) return;
+
+  const updated = [...selectedRouteStops];
+  [updated[index], updated[newIndex]] = [updated[newIndex], updated[index]];
+  selectedRouteStops = updated;
+
+  renderRouteStops();
+  applyFilters(false);
+}
+
+function clearRouteStops() {
+  selectedRouteStops = [];
+  renderRouteStops();
+  applyFilters(false);
+}
+
+function buildGoogleMapsRouteUrl(stops) {
+  if (stops.length < 2) return "#";
+
+  const origin = routePoint(stops[0]);
+  const destination = routePoint(stops[stops.length - 1]);
+  const waypoints = stops.slice(1, -1).map(routePoint).join("|");
+
+  const params = new URLSearchParams({
+    api: "1",
+    origin,
+    destination,
+    travelmode: "driving"
+  });
+
+  if (waypoints) {
+    params.set("waypoints", waypoints);
+  }
+
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
+}
+
+function renderRouteStops() {
+  const list = document.getElementById("routeStopList");
+  const empty = document.getElementById("routeEmpty");
+  const openBtn = document.getElementById("openRouteBtn");
+  const clearBtn = document.getElementById("clearRouteBtn");
+
+  if (!list || !empty || !openBtn || !clearBtn) return;
+
+  list.innerHTML = "";
+  empty.hidden = selectedRouteStops.length > 0;
+
+  for (let index = 0; index < selectedRouteStops.length; index++) {
+    const stop = selectedRouteStops[index];
+
+    const li = document.createElement("li");
+    li.className = "route-stop-item";
+
+    const title = document.createElement("div");
+    title.className = "route-stop-title";
+    title.textContent = stop.Name;
+
+    const meta = document.createElement("div");
+    meta.className = "route-stop-meta";
+    meta.textContent = `RG ${formatRG(stop.RG)} · ${stop.AdresseVoll}`;
+
+    const actions = document.createElement("div");
+    actions.className = "route-stop-actions";
+
+    const upBtn = document.createElement("button");
+    upBtn.type = "button";
+    upBtn.textContent = "↑ Hoch";
+    upBtn.disabled = index === 0;
+    upBtn.addEventListener("click", () => moveRouteStop(index, -1));
+
+    const downBtn = document.createElement("button");
+    downBtn.type = "button";
+    downBtn.textContent = "↓ Runter";
+    downBtn.disabled = index === selectedRouteStops.length - 1;
+    downBtn.addEventListener("click", () => moveRouteStop(index, 1));
+
+    const removeBtn = document.createElement("button");
+    removeBtn.type = "button";
+    removeBtn.textContent = "Entfernen";
+    removeBtn.addEventListener("click", () => removeRouteStop(stop.stopId));
+
+    actions.appendChild(upBtn);
+    actions.appendChild(downBtn);
+    actions.appendChild(removeBtn);
+
+    li.appendChild(title);
+    li.appendChild(meta);
+    li.appendChild(actions);
+
+    list.appendChild(li);
+  }
+
+  openBtn.disabled = selectedRouteStops.length < 2;
+  clearBtn.disabled = selectedRouteStops.length === 0;
+}
+
 function loadData() {
   Papa.parse('data/standorte.csv', {
     download: true,
@@ -114,6 +246,7 @@ function loadData() {
         .filter(row => Number.isFinite(row.Latitude) && Number.isFinite(row.Longitude));
 
       populateRGFilter(allRows);
+      renderRouteStops();
       applyFilters();
     },
     error: () => {
@@ -267,6 +400,25 @@ function renderList(split) {
       <div class="result-address">${escapeHtml(row.AdresseVoll)}</div>
     `;
 
+    const actions = document.createElement("div");
+    actions.className = "result-actions";
+  
+    const routeBtn = document.createElement("button");
+    routeBtn.type = "button";
+    routeBtn.className = "route-add-btn";
+    
+    const alreadySelected = isStopSelected(row);
+    routeBtn.textContent = alreadySelected ? "In Route" : "+ Route";
+    routeBtn.disabled = alreadySelected;
+    
+    routeBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      addRouteStop(row);
+  });
+
+actions.appendChild(routeBtn);
+li.appendChild(actions);
+
     li.addEventListener('click', () => {
       const marker = markerByName.get(row.Name);
       map.setView([row.Latitude, row.Longitude], 16, { animate: true });
@@ -394,5 +546,14 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   applyFilters(true);
 });
 document.getElementById('fitBtn').addEventListener('click', () => applyFilters(true));
+
+document.getElementById("clearRouteBtn").addEventListener("click", clearRouteStops);
+
+document.getElementById("openRouteBtn").addEventListener("click", () => {
+  if (selectedRouteStops.length < 2) return;
+
+  const routeUrl = buildGoogleMapsRouteUrl(selectedRouteStops);
+  window.open(routeUrl, "_blank", "noopener,noreferrer");
+});
 
 initPasswordGate();
