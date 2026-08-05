@@ -303,37 +303,116 @@ function applyFilters(refit = false) {
 }
 
 async function sha256Hex(value) {
+  console.log("[PW] sha256Hex() gestartet");
+
   const buffer = await crypto.subtle.digest(
     "SHA-256",
     new TextEncoder().encode(value)
   );
-  return [...new Uint8Array(buffer)]
+
+  const result = [...new Uint8Array(buffer)]
     .map(byte => byte.toString(16).padStart(2, "0"))
     .join("");
+
+  console.log("[PW] sha256Hex() fertig:", result);
+  return result;
 }
 
 function showApp() {
-  document.getElementById("passwordGate").hidden = true;
-  document.getElementById("appShell").hidden = false;
+  console.log("[PW] showApp() aufgerufen");
+
+  const gate = document.getElementById("passwordGate");
+  const appShell = document.getElementById("appShell");
+
+  console.log("[PW] gate gefunden:", !!gate);
+  console.log("[PW] appShell gefunden:", !!appShell);
+
+  if (gate) gate.hidden = true;
+  if (appShell) appShell.hidden = false;
+
+  console.log("[PW] gate hidden:", gate ? gate.hidden : "n/a");
+  console.log("[PW] appShell hidden:", appShell ? appShell.hidden : "n/a");
 
   setTimeout(() => {
+    console.log("[PW] map.invalidateSize()");
     map.invalidateSize();
   }, 0);
 }
 
 function startApp() {
+  console.log("[PW] startApp() aufgerufen");
+  console.log("[PW] appStarted vorher:", appStarted);
+
   if (!appStarted) {
+    console.log("[PW] loadData() wird ausgeführt");
     loadData();
     appStarted = true;
   }
+
+  console.log("[PW] appStarted nachher:", appStarted);
   showApp();
 }
 
-async function initPasswordGate() {
-  if (localStorage.getItem(SESSION_KEY) === "1") {
+function initPasswordGate() {
+  console.log("[PW] initPasswordGate() gestartet");
+  console.log("[PW] sessionStorage:", sessionStorage.getItem(SESSION_KEY));
+
+  if (sessionStorage.getItem(SESSION_KEY) === "1") {
+    console.log("[PW] Session bereits freigeschaltet");
     startApp();
     return;
   }
+
+  const form = document.getElementById("passwordForm");
+  const input = document.getElementById("passwordInput");
+  const error = document.getElementById("passwordError");
+  const gate = document.getElementById("passwordGate");
+  const appShell = document.getElementById("appShell");
+
+  console.log("[PW] Elemente:", {
+    form: !!form,
+    input: !!input,
+    error: !!error,
+    gate: !!gate,
+    appShell: !!appShell
+  });
+
+  if (!form || !input || !error || !gate || !appShell) {
+    console.error("[PW] Password-Gate-Elemente fehlen");
+    return;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    console.log("[PW] submit ausgelöst");
+
+    error.hidden = true;
+
+    const enteredPassword = input.value;
+    console.log("[PW] Passwort-Länge:", enteredPassword.length);
+
+    const enteredHash = await sha256Hex(enteredPassword);
+
+    console.log("[PW] enteredHash:", enteredHash);
+    console.log("[PW] storedHash :", PASSWORD_HASH);
+    console.log("[PW] equal      :", enteredHash === PASSWORD_HASH);
+
+    if (enteredHash === PASSWORD_HASH) {
+      console.log("[PW] Passwort korrekt");
+      sessionStorage.setItem(SESSION_KEY, "1");
+      startApp();
+      return;
+    }
+
+    console.log("[PW] Passwort falsch");
+    input.value = "";
+    error.hidden = false;
+    input.focus();
+  });
+
+  console.log("[PW] Event-Listener registriert");
+  input.focus();
+}
 
   const form = document.getElementById("passwordForm");
   const input = document.getElementById("passwordInput");
@@ -369,4 +448,5 @@ document.getElementById('resetBtn').addEventListener('click', () => {
 });
 document.getElementById('fitBtn').addEventListener('click', () => applyFilters(true));
 
+console.log("[PW] Bootstrap");
 initPasswordGate();
