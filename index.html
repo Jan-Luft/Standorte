@@ -58,6 +58,24 @@
         <div class="legend-item"><span class="dot dot-primary"></span>aktuelle Treffer auf der Karte</div>
       </div>
 
+      <section class="route-panel">
+  <div class="route-panel-header">
+    <h2>Route</h2>
+    <p>Mindestens 2 Standorte auswählen.</p>
+  </div>
+
+  <div id="routeEmpty" class="route-empty">
+    Noch keine Stopps ausgewählt.
+  </div>
+
+  <ol id="routeStopList" class="route-stop-list"></ol>
+
+  <div class="route-button-row">
+    <button id="clearRouteBtn" type="button">Route leeren</button>
+    <button id="openRouteBtn" type="button" disabled>Route öffnen</button>
+  </div>
+</section>
+
       <div id="summary" class="summary"></div>
       <div id="emptyState" class="empty-state" hidden>Keine Treffer für diese Auswahl.</div>
       <ul id="resultList" class="result-list"></ul>
