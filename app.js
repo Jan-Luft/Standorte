@@ -347,25 +347,68 @@ function startApp() {
 }
 
 function initPasswordGate() {
+  console.log("[PW] initPasswordGate() gestartet");
+  console.log("[PW] sessionStorage:", sessionStorage.getItem(SESSION_KEY));
+
   const gate = document.getElementById("passwordGate");
   const appShell = document.getElementById("appShell");
+  const form = document.getElementById("passwordForm");
+  const input = document.getElementById("passwordInput");
+  const error = document.getElementById("passwordError");
 
   if (gate) gate.style.display = "grid";
   if (appShell) appShell.style.display = "none";
-  
+
   if (sessionStorage.getItem(SESSION_KEY) === "1") {
+    console.log("[PW] Session bereits freigeschaltet");
     startApp();
     return;
   }
 
-  const form = document.getElementById("passwordForm");
-  const input = document.getElementById("passwordInput");
-  const error = document.getElementById("passwordError");
-  const gate = document.getElementById("passwordGate");
-  const appShell = document.getElementById("appShell");
-    );
+  console.log("[PW] Elemente gefunden:", {
+    form: !!form,
+    input: !!input,
+    error: !!error,
+    gate: !!gate,
+    appShell: !!appShell
+  });
+
+  if (!form || !input || !error || !gate || !appShell) {
+    console.error("[PW] Password-Gate-Elemente fehlen");
     return;
   }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    console.log("[PW] submit ausgelöst");
+
+    error.hidden = true;
+
+    const enteredPassword = input.value;
+    console.log("[PW] Passwort-Länge:", enteredPassword.length);
+
+    const enteredHash = await sha256Hex(enteredPassword);
+
+    console.log("[PW] enteredHash:", enteredHash);
+    console.log("[PW] storedHash :", PASSWORD_HASH);
+    console.log("[PW] equal      :", enteredHash === PASSWORD_HASH);
+
+    if (enteredHash === PASSWORD_HASH) {
+      console.log("[PW] Passwort korrekt");
+      sessionStorage.setItem(SESSION_KEY, "1");
+      startApp();
+      return;
+    }
+
+    console.log("[PW] Passwort falsch");
+    input.value = "";
+    error.hidden = false;
+    input.focus();
+  });
+
+  console.log("[PW] Event-Listener registriert");
+  input.focus();
+}
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
